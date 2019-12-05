@@ -170,7 +170,7 @@ body .default-btn::after {
   padding-left: 10px;
 }
 .slider {
-  background-image: url(/img/slider-fon.jpg);
+  background-image: url(../img/slider-fon.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -297,7 +297,7 @@ body .default-btn::after {
   color: #373636;
 }
 .about {
-  background-image: url(/img/about-img.jpg);
+  background-image: url(../img/about-img.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -329,7 +329,7 @@ body .default-btn::after {
 }
 .form__inner {
   padding-bottom: 40px;
-  background-image: url(/img/form-bg.png);
+  background-image: url(../img/form-bg.png);
   min-height: 460px;
   background-repeat: no-repeat;
   background-position: bottom right;
@@ -475,7 +475,7 @@ body .default-btn::after {
 }
 .advantages {
   padding: 55px 0 40px;
-  background-image: url(/img/advantages-bg.jpg);
+  background-image: url(../img/advantages-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
