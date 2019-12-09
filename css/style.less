@@ -17,16 +17,13 @@
     }
 
     h2,
-    h3 {
-        margin: 0;
-        padding: 0;
-
-    }
-
+    h3,
     p {
         margin: 0;
         padding: 0;
+
     }
+
 
     ul,
     li {
@@ -106,6 +103,10 @@
             z-index: 2;
             outline: none;
 
+            &:hover {
+                color: @brand-color;  
+              }
+
             &::after {
                 font-family: @font-icomoon;
                 content: "\f105";
@@ -114,6 +115,7 @@
                 transform: translateY(-50%);
                 right: -12px;
             }
+ 
         }
     }
 
@@ -137,6 +139,13 @@
             letter-spacing: 0.25px;
             line-height: 45px;
             position: relative;
+
+            &:hover {
+                color: @brand-color;
+                text-decoration: underline;
+                transition: all .2s;
+
+            }
         }
 
         &__phone {
@@ -169,7 +178,8 @@
             line-height: 36px;
             font-size: 16px;
             color: #1b1b1b;
-            background-color: @brand-color;
+            background-color: #ffc022ea;
+
             padding: 5px 20px 4px 50px;
             position: relative;
 
@@ -179,6 +189,10 @@
                 position: absolute;
                 left: 22px;
                 color: black;
+            }
+            &:hover {
+                background-color: @brand-color;
+
             }
         }
 
@@ -300,12 +314,16 @@
         }
 
         &__btn a {
-            border: 3px solid #e6e6e6;
+            border: 2px solid #e6e6e6;
             line-height: 24px;
             letter-spacing: 0.25px;
             padding: 5px 38px;
             color: #373636;
+
+            &:hover {
+            border-color: @brand-color;
         }
+    }
 
         &__items {
             display: flex;
@@ -346,6 +364,11 @@
                 color: #050505;
                 border-bottom: 0.5px solid #050505;
                 margin-right: 60px;
+
+                &:hover {
+                    color: #05050598;
+                    border-bottom: 0.5px solid #05050598;
+                }
             }
 
             &-btn {
@@ -481,14 +504,11 @@
                     outline: none;
                     height: 40px;
                     border: 1px solid #d6d5d5;
-
-
                 }
 
                 .jq-selectbox.jqselect {
                     display: block;
                     width: 100%;
-
                 }
 
                 .jq-selectbox__select {
@@ -496,7 +516,7 @@
                     border: 1px solid #d6d5d5;
                     background-color: transparent;
                     padding-left: 17px;
-
+                    cursor: pointer;
                 }
 
                 .jq-selectbox__dropdown {
@@ -504,7 +524,6 @@
                     margin: 2px 0 0;
                     padding: 0;
                     border: 1px solid #d6d5d5;
-
                     background: #FFF;
                     box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
                 }
@@ -519,7 +538,6 @@
                         transform: rotate(90deg);
                     }
                 }
-
 
                 .jq-selectbox li {
                     min-height: 18px;
@@ -559,7 +577,6 @@
                     padding-left: 25px;
                 }
 
-
                 textarea {
                     outline: none;
                     border: 1px solid #d6d5d5;
@@ -567,7 +584,6 @@
                     height: 208px;
                     resize: none;
                     margin-bottom: 41px;
-
                 }
 
                 & button {
@@ -575,8 +591,12 @@
                     color: #282828;
                     float: right;
 
-                }
+                    &:hover {
+                        color: @brand-color;
+                        cursor: pointer;
+                    }
 
+                }
 
                 .form__box-left {
                     max-width: 260px;
@@ -707,11 +727,15 @@
         }
 
         &__btn a {
-            border: 3px solid #e6e6e6;
+            border: 2px solid #e6e6e6;
             line-height: 24px;
             letter-spacing: 0.25px;
             padding: 5px 38px;
             color: #373636;
+            
+            &:hover {
+                border-color: @brand-color;
+            }
         }
 
         &__inner {
@@ -730,7 +754,6 @@
             &::before {
                 content: "\f10e";
                 position: absolute;
-
                 font-family: @font-icomoon;
                 color: #ffffff;
                 font-size: 16px;
@@ -741,64 +764,78 @@
                 background-color: @brand-color;
                 top: 0;
             }
-        }
 
-        &__slider-title {
-            font-family: @font-roboto;
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 24px;
-            letter-spacing: 0.5px;
-            color: #212020;
-            margin-bottom: 15px;
-        }
+            &-title {
+                font-family: @font-roboto;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 24px;
+                letter-spacing: 0.5px;
+                color: #212020;
+                margin-bottom: 15px;
+            }
 
-        &__slider-text {
-            font-family: @font-roboto;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 18px;
-            letter-spacing: 0.1px;
-            color: #5e5e5e;
-            color: @second-color;
-            margin-bottom: 30px;
-        }
+            &-text {
+                font-family: @font-roboto;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 18px;
+                letter-spacing: 0.1px;
+                color: #5e5e5e;
+                color: @second-color;
+                margin-bottom: 30px;
+            }
 
-        &__slider-author {
-            font-family: @font-roboto;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 18px;
-            letter-spacing: 0.1px;
-            color: #212020;
+            &-author {
+                font-family: @font-roboto;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 18px;
+                letter-spacing: 0.1px;
+                color: #212020;
+    
+            }
 
-        }
+            &-inner .slick-btn {
+                top: auto;
+                bottom: -110px;
+            }
 
-        &__slider-inner .slick-btn {
-            top: auto;
-            bottom: -110px;
-        }
-
-        &__slider-inner .slick-next {
-            right: -35px;
-        }
-
-        &__slider-inner .slick-prev {
-            right: 20px;
-            left: auto;
-        }
-
-        &__slider-inner .slick-disabled {
-            border-color: #dadada;
-
-            &::before {
-                color: #dadada;
+            &-inner .slick-next {
+                right: -35px;
+            }
+    
+            &-inner .slick-prev {
+                right: 20px;
+                left: auto;
+            }
+    
+            &-inner .slick-disabled {
+                border-color: #dadada;
+    
+                &::before {
+                    color: #dadada;
+                }
             }
         }
 
         &__blog {
             max-width: 260px;
             width: 100%;
+
+            &-title {
+                font-family: @font-roboto;
+                font-size: 16px;
+                font-weight: 500;
+                color: #242424;
+                letter-spacing: 0.5px;
+                padding: 12px 0;
+            }
+    
+            &-text {
+                letter-spacing: 0.1px;
+                color: #5e5e5e;
+            }
         }
 
         &__images {
@@ -817,21 +854,6 @@
             top: 0px;
             left: 10px;
         }
-
-        &__blog-title {
-            font-family: @font-roboto;
-            font-size: 16px;
-            font-weight: 500;
-            color: #242424;
-            letter-spacing: 0.5px;
-            padding: 12px 0;
-        }
-
-        &__blog-text {
-            letter-spacing: 0.1px;
-            color: #5e5e5e;
-        }
-
     }
 
     // -------------------------------------------------
@@ -881,11 +903,9 @@
 
         &__list {
             padding-top: 10px;
-
             li {
                 margin-top: 10px;
             }
-
             a {
                 font-family: @font-roboto;
                 font-weight: 400;
@@ -893,9 +913,13 @@
                 line-height: 24px;
                 letter-spacing: 0.25px;
                 color: #fff;
-
                 padding-left: 33px;
                 position: relative;
+
+                &:hover {
+                    color: @brand-color;
+                    text-decoration: underline;
+                }
 
                 &::before {
                     font-family: @font-icomoon;
